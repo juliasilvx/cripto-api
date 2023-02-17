@@ -1,17 +1,23 @@
-const service= require('../services/criptoService')
+const service = require('../services/criptoService')
 
-/* exports.adiconarMoeda = (req, res) => {
+// exports.adiconarMoeda = (req, res) => {
+
+// }
+
+// exports.alterarMoeda = (req, res) => {
+
+// }
+
+exports.obterMoedas = (req, res) => {
+    res.status(201).send(service.obterMoedasService());
 }
 
-exports.alterarMoeda = (req, res) => {
-} */
-
-exports.obterMoeda = (req,res) => {
-    res.status(201).send(service.obterMoedasService())
-}
-/* 
-exports.obterMoeda = (req, res) => {    
+exports.obterMoedaPeloId = (req, res) => {
+    let id = parseInt(req.query.id);
+    let moeda = service.obterMoedaPeloIdService(id)
+    res.status(201).send(moeda);
 }
 
-exports.deletarMoeda = (req, res) => {
-} */
+// exports.deletarMoeda = (req, res) => {
+
+// }

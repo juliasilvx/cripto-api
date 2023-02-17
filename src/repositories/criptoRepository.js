@@ -1,4 +1,61 @@
-exports.obterMoedaRepository = () => {
+exports.obterMoedaPeloIdRepository = (id) => {
+  
+    /* Simulando o nosso banco de dados */
+    let moedas = [{
+        id: 1,
+        nome: "Bitcoin",
+        paridade: ["Ethereum", "Tether", "BNB"],
+        corretoras: ["Binance", "Cracken", "CoinBase"],
+        precoCompraVenda: 200000.00,
+        unidadeMonetariaCompraVenda: "BRL",
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lectus, cursus in odio vel, ultricies tincidunt odio."
+    },
+    {
+        id: 2,
+        nome: "JulixCoin",
+        paridade: ["Ethereum", "Tether", "BNB"],
+        corretoras: ["Binance", "Cracken", "vasco"],
+        precoCompraVenda: 200000.00,
+        unidadeMonetariaCompraVenda: "BRL",
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lectus, cursus in odio vel, ultricies tincidunt odio."
+    },
+    {
+        id: 3,
+        nome: "Elacoin",
+        paridade: ["bot", "flu", "fla"],
+        corretoras: ["ok", "ela", "ele"],
+        precoCompraVenda: 300000.00,
+        UnidadeMonetariaCompraVenda: "BRL",
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lectus, cursus in odio vel, ultricies tincidunt odio."
+
+    },
+    {
+        id: 4,
+        nome: "Elecoin",
+        paridade: ["EUA", "BR", "ARG"],
+        corretoras: ["chile", "bol", "uru"],
+        precoCompraVenda: 500000.00,
+        UnidadeMonetariaCompraVenda: "BRL",
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lectus, cursus in odio vel, ultricies tincidunt odio."
+    },
+    {
+        id: 5,
+        nome: "Fulanocoin",
+        paridade: ["colombia", "peru", "ven"],
+        corretoras: ["equa", "catar", "fy"],
+        precoCompraVenda: 800000.00,
+        UnidadeMonetariaCompraVenda: "BRL",
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lectus, cursus in odio vel, ultricies tincidunt odio."
+    }]
+
+       /* Buscando a moeda selecionada (parametro: id) com
+    find */
+    let moedaSelecionada = moedas.find(moeda => moeda.id == id);
+    
+    return moedaSelecionada;
+}
+
+exports.obterMoedasRepository = () => {
     // Nome da moeda
     // Nome: string
 
@@ -17,31 +74,52 @@ exports.obterMoedaRepository = () => {
     // Unidade monetaria para compra e venda
     // UnidadeMonetariaCompraVenda: string
 
-
-
     let moedas = [{
-        nome:"Shiba Inu",
-        paridade:["aws", "unilever", "brt"],
-        corretoras: ["coconut", "red", "sims"],
-        precoCompraVenda: 150000.00,
-        UnidadeMonetariaCompraVenda: "BRL",    
+        id: 1,
+        nome: "Bitcoin",
+        paridade: ["Ethereum", "Tether", "BNB"],
+        corretoras: ["Binance", "Cracken", "CoinBase"],
+        precoCompraVenda: 200000.00,
+        unidadeMonetariaCompraVenda: "BRL",
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lectus, cursus in odio vel, ultricies tincidunt odio."
     },
-    
     {
-        nome:"Uniswap",
-        paridade:["runaway", "tokyo", "jumper"],
-        corretoras: ["newyork", "elsa", "simba"],
-        precoCompraVenda: 150000.00,
-        UnidadeMonetariaCompraVenda: "BRL",  
+        id: 2,
+        nome: "JulixCoin",
+        paridade: ["Ethereum", "Tether", "BNB"],
+        corretoras: ["Binance", "Cracken", "vasco"],
+        precoCompraVenda: 200000.00,
+        unidadeMonetariaCompraVenda: "BRL",
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lectus, cursus in odio vel, ultricies tincidunt odio."
     },
-    
     {
-        nome:"Stellar",
-        paridade:["berlim", "usa", "london"],
-        corretoras: ["Yellow", "yahoo", "morning"],
-        precoCompraVenda: 150000.00,
-        UnidadeMonetariaCompraVenda: "BRL"
+        id: 3,
+        nome: "Elacoin",
+        paridade: ["bot", "flu", "fla"],
+        corretoras: ["ok", "ela", "ele"],
+        precoCompraVenda: 300000.00,
+        UnidadeMonetariaCompraVenda: "BRL",
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lectus, cursus in odio vel, ultricies tincidunt odio."
+
+    },
+    {
+        id: 4,
+        nome: "Elecoin",
+        paridade: ["EUA", "BR", "ARG"],
+        corretoras: ["chile", "bol", "uru"],
+        precoCompraVenda: 500000.00,
+        UnidadeMonetariaCompraVenda: "BRL",
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lectus, cursus in odio vel, ultricies tincidunt odio."
+    },
+    {
+        id: 5,
+        nome: "Fulanocoin",
+        paridade: ["colombia", "peru", "ven"],
+        corretoras: ["equa", "catar", "fy"],
+        precoCompraVenda: 800000.00,
+        UnidadeMonetariaCompraVenda: "BRL",
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat lectus, cursus in odio vel, ultricies tincidunt odio."
     }]
-    
+
     return moedas;
 }
