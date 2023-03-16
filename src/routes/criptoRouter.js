@@ -6,6 +6,6 @@ const controller = require('../controllers/criptoController')
 router.get('/obter-moedas', controller.obterMoedas)
 router.get('/obter-moeda/peloId', controller.obterMoedaPeloId)
 //router.delete('/deleta-moeda', controller.deletaMoeda)
-//router.put('/altera-moeda', controller.alteraMoeda)
+router.put('/altera-moeda', controller.alterarMoeda)
 
 module.exports = router;

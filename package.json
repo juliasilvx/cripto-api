@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mysql2": "^3.2.0"
   },
   "name": "cad-cripto-api",
   "version": "1.0.0",
@@ -8,7 +9,6 @@
   "bin": {
     "cad-cripto-api": "bin/server.js"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./bin/server.js"
